@@ -5,5 +5,11 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
+    if (symbolsCount > str.length) {
+      return str
+  }
+  let suffix = str.slice(-symbolsCount); 
+  return suffix + str + suffix;
   throw new Error('Not implemented');
+
 };
