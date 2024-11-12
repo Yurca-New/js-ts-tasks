@@ -8,5 +8,18 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
+  arr = arr.map(num => Math.abs(num))
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 10) {
+      arr[i] = 1;
+    } else if (arr[i] < 100) {
+      arr[i] = 2;
+    } else if (arr[i] < 1000) {
+      arr[i] = 3;
+    } else {
+      arr[i] = 4;
+    }
+  }
+  return arr;
   throw new Error('Not implemented'); // remove me and write a solution
 };

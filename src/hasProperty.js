@@ -5,5 +5,12 @@
  * @returns {boolean}
  */
 module.exports.hasProperty = function hasProperty(object, prop) {
+  // for (let i = 0; i < object.length; i++) {
+    if (object[prop] === undefined) {
+      return false;
+    }else{
+      return true;
+    }
+  // }
   throw new Error('Not implemented'); // remove me and write a solution
 };
