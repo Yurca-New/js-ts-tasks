@@ -77,7 +77,7 @@ module.exports.findUsersByAge = function (users, age) {
   let user = []
   for (var i = 0; i < users.length; i++) {
     if (users[i].age === age) {
-      user.push(new User (users[i].firstName, users[i].secondName, users[i].age));
+      user.push(users[i]);
       
     }
 
